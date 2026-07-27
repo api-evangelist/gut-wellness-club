@@ -1,8 +1,25 @@
 aid: gut-wellness-club
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gut-wellness-club.png
 name: Gut Wellness Club
-description: 'Gut Wellness Club is a company surfaced as a portfolio company of accel and added to the
-  API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Gut Wellness Club is an India-based consumer wellness brand offering a "Gut Reset" program that
+  promises to resolve digestive issues in 15-20 days using natural traditional foods, yoga, Ayurveda,
+  and Naturopathy as an alternative to medication. The site is Wix-hosted and, notably for a consumer
+  brand, exposes agent-native surfaces: a published /llms.txt and a live, hosted Wix Site MCP endpoint
+  that lets AI agents retrieve business details, search the site, and access Wix REST APIs without
+  scraping. It has no first-party developer API, OpenAPI, or SDKs. Surfaced via Accel portfolio mining
+  and enriched from its real public agent surfaces.
 url: https://raw.githubusercontent.com/api-evangelist/gut-wellness-club/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +29,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Ai
+- Wellness
+- Health
+- Consumer
+- Gut Health
+- Ayurveda
+- MCP
+- Agent Native
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +47,23 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/gut-wellness-club-domain-security.yml
+- type: MCPServer
+  name: Wix Site MCP (Site Visitor Assistant)
+  url: mcp/gut-wellness-club-mcp.yml
+- type: LLMsTxt
+  url: llms/gut-wellness-club-llms.txt
+- type: WellKnown
+  url: well-known/gut-wellness-club-well-known.yml
+- type: TermsOfService
+  url: https://www.gutwellnessclub.in/terms-conditions
+- type: Support
+  url: https://www.gutwellnessclub.in/contact-1
 - type: Website
   url: https://www.gutwellnessclub.in/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
