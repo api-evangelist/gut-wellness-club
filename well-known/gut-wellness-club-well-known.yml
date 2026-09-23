@@ -1,12 +1,12 @@
 generated: '2026-07-19'
 method: searched
 host: https://www.gutwellnessclub.in
-notes: >-
-  Wix-hosted site. No /.well-known discovery documents are published; the host
-  returns HTTP 400 for the standard well-known paths. Agent-native discovery is
-  instead exposed via /llms.txt and a hosted Wix Site MCP endpoint
-  (see llms/ and mcp/). Absence recorded as valid data.
-documents:
+notes: Wix-hosted site. No /.well-known discovery documents are published; the host returns HTTP 400 for
+  the standard well-known paths. Agent-native discovery is instead exposed via /llms.txt and a hosted
+  Wix Site MCP endpoint (see llms/ and mcp/). Absence recorded as valid data.
+hosts:
+- host: https://www.gutwellnessclub.in
+  documents:
   - path: /.well-known/security.txt
     status: 400
   - path: /.well-known/openid-configuration
@@ -17,3 +17,8 @@ documents:
     status: 400
   - path: /.well-known/ai-plugin.json
     status: 400
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
