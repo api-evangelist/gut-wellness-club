@@ -50,7 +50,7 @@ tags:
 - Gut Health
 - Ayurveda
 - MCP
-- agent-native
+- Agent-Native
 tags_raw:
 - Company
 - Ai
@@ -61,6 +61,7 @@ tags_raw:
 - Ayurveda
 - MCP
 - Agent Native
+- agent-native
 apis: []
 maintainers:
 - FN: Kin Lane
